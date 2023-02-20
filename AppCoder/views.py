@@ -22,3 +22,6 @@ def entregrables(request):
 def estudiantes(request):
     return render(request, 'AppCoder/estudiantes.html')
     #return HttpResponse('vista estudiantes')
+
+def cursoFormulario(request):
+    return render(request,"AppCoder/cursoFormulario.html")
