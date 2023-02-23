@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre_mecanicos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<div id="content"></div>
+{% block content %}
+<center>
+  <br>
+  <h2>Registrar un Mecanico</h2>
+  <br>
+  <form method="post">  {% csrf_token %}
+    {{ mecanico_registro.as_table }}
+    <button type="submit">Registrar</button>
+  </form>
+</center>
+{% endblock %}
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "AppCoder/padre_autos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<br>
+<h3><center><b>El vehiculo se ha registrado en nuesta base de datos!</b></center></h3>
+<br>
+<h4><center><b>Si quieres puedes seguir ingresando mas vehiculos o puedes ir a la lista de autos.</b></center></h4>
+<h4><center><a href="{% url 'autoRegistro' %}" type="submit"><b>Ingresa un Auto</b></a> <a href="{% url 'autos' %}" type="submit"> <br> <b> Lista</b></a></center></h4>
+<br>
+{% endblock %}

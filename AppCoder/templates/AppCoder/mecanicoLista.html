@@ -1,0 +1,10 @@
+{% extends "AppCoder/padre_mecanicos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<br>
+<h3><center><b>Lista de Mecanicos</b></center></h3>
+<br>
+{% for Mecanicos in mecanicos_disp %}
+<li><b> <FONT COLOR="blue">NOMBRE:</FONT> </b><b>{{ Mecanicos.nombre }}</b> <b>| <FONT COLOR="blue">APELLIDO:</FONT> </b><b> {{ Mecanicos.apellido }}</b> <b>| <FONT COLOR="blue">ESPECIALIZACION:</FONT> </b><b> {{ Mecanicos.especializacion}}</b></li>
+{% endfor %}
+{%endblock %}

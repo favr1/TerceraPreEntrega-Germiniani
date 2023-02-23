@@ -1,0 +1,10 @@
+{% extends "AppCoder/padre_autos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<br>
+<h3><center><b>Lista de Vehiculos</b></center></h3>
+<br>
+{% for Autos in autos_disp %}
+<li><b> <FONT COLOR="blue">MARCA:</FONT> </b><b>{{ Autos.marca }}</b> <b>| <FONT COLOR="blue">MODELO:</FONT> </b><b> {{ Autos.modelo }}</b> <b>| <FONT COLOR="blue">Reparacion:</FONT> </b><b> {{ Autos.reparacion}}</b> <b>|<FONT COLOR="green"> PRECIO: $</FONT></b><b>{{ Autos.precio}}</b></li>
+{% endfor %}
+{%endblock %}

@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre_mecanicos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<center>
+    <br>
+<h2><FONT COLOR="black">Buscar Mecanicos</FONT></h2>
+<br>
+    <form action="{% url 'mecanicoBuscar' %}" method="get">
+        <label for="nombre"><b> Nombre: </b></label>
+        <input type="text" id="nombre" name="nombre" value="{{ request.GET.nombre }}">
+        <button type="submit">Buscar</button>
+    </form>
+    <p><FONT COLOR="black">Para ver la lista completa, solo deja vacio el campo de arriba y presiona buscar.</FONT></p>
+    </form>
+    <br>
+    {% if resultados %}
+    <h3><FONT COLOR="blue">Resultados</FONT></h3>
+    <br>
+    <ul>
+        {% for mecanicos_disp in resultados %}
+            <li><b> <FONT COLOR="blue">NOMBRE:</FONT> </b><b>{{ mecanicos_disp.nombre }}</b> <b>| <FONT COLOR="blue">APELLIDO:</FONT> </b><b> {{ mecanicos_disp.apellido }}</b> <b>| <FONT COLOR="blue">ESPECIALIZACION:</FONT> </b><b> {{ mecanicos_disp.especializacion}}</b></li>
+            <br>
+        {% endfor %}
+    </ul>
+</center>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "AppCoder/padre_mecanicos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<br>
+<h3><center><b>El mecanico se ha registrado en nuesta base de datos!</b></center></h3>
+<br>
+<h4><center><b>Si quieres puedes seguir ingresando mas mecanicos o puedes ir a la lista de mecanicos.</b></center></h4>
+<h4><center><a href="{% url 'mecanicoRegistro' %}" type="submit"><b>Ingresa un nuevo mecanico</b></a> <a href="{% url 'mecanicos' %}" type="submit"> <br> <b>Lista</b></a></center></h4>
+<br>
+{% endblock %}

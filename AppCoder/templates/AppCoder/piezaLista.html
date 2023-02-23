@@ -1,0 +1,10 @@
+{% extends "AppCoder/padre_piezas.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<br>
+<h3><center><b>Lista de Piezas</b></center></h3>
+<br>
+{% for Piezas in piezas_disp %}
+<li><b> <FONT COLOR="blue">NOMBRE:</FONT> </b><b>{{ Piezas.nombre }}</b> <b>| <FONT COLOR="blue">PRECIO:</FONT> </b><b> {{ Piezas.precio }}</b> <b>| <FONT COLOR="blue">CANTIDAD:</FONT> </b><b> {{ Piezas.cantidad}}</b></li>
+{% endfor %}
+{%endblock %}

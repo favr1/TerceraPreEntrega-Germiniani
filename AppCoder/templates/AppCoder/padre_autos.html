@@ -14,16 +14,15 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'AppCoder/css/styles4.css' %}" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'autosView' %}"><b>Autos</b></a>
-                <a class="navbar-brand" href="{% url 'mecanicosView' %}"><b>Mecanicos</b></a>
-                <a class="navbar-brand" href="{% url 'piezasView' %}"><b>Piezas</b></a>
-                <a class="navbar-brand" href="{% url 'Nosotros' %}""><b>Nosotros</b></a>
+                <a class="navbar-brand" href="{% url 'Inicio' %}""><b>Volver al Inicio</b></a>
+                <a class="navbar-brand" href="{% url 'autoRegistro' %}"><b>Registrar Autos</b></a>
+                <a class="navbar-brand" href="{% url 'autoBuscar' %}"><b>Buscar Auto</b></a>
                 <!-- <a class="btn btn-primary" href="#signup">Sign Up</a> -->
             </div>
         </nav>

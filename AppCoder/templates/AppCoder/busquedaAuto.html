@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre_autos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<center>
+    <br>
+<h2><FONT COLOR="black">Buscar Autos</FONT></h2>
+<br>
+    <form action="{% url 'autoBuscar' %}" method="get">
+        <label for="nombre"><b> MARCA: </b></label>
+        <input type="text" id="nombre" name="nombre" value="{{ request.GET.nombre }}">
+        <button type="submit">Buscar</button>
+    </form>
+    <p><FONT COLOR="black">Para ver la lista completa, solo deja vacio el campo de arriba y presiona buscar.</FONT></p>
+    </form>
+    <br>
+    {% if resultados %}
+    <h3><FONT COLOR="blue">Resultados</FONT></h3>
+    <br>
+    <ul>
+        {% for autos_disp in resultados %}
+            <li><b> <FONT COLOR="blue">MARCA:</FONT> </b><b>{{ autos_disp.marca }}</b> <b>| <FONT COLOR="blue">MODELO:</FONT> </b><b> {{ autos_disp.modelo }}</b> <b>| <FONT COLOR="blue">Reparacion:</FONT> </b><b> {{ autos_disp.reparacion}}</b> <b>|<FONT COLOR="green"> PRECIO: $</FONT></b><b>{{ autos_disp.precio}}</b></li>
+            <br>
+        {% endfor %}
+    </ul>
+</center>
+    {% endif %}
+{% endblock %}

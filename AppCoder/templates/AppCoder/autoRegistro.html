@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre_autos.html"%}
+{% load static %}
+{% block Contenido_Que_Cambia %}
+<div id="content"></div>
+{% block content %}
+<center>
+  <br>
+  <h2>Registrar un Auto</h2>
+  <br>
+  <form method="post">  {% csrf_token %}
+    {{ auto_registro.as_table }}
+    <button type="submit">Registrar</button>
+  </form>
+</center>
+{% endblock %}
+</div>
+{% endblock %}
